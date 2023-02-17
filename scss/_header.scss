@@ -1,0 +1,17 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1000px;
+  color: $color-aside;
+  h1 {
+    font-size: 56px;
+    margin: 20px;
+    font-family: $fuente-titulo;
+    line-height: 100px;
+    width: 80%;
+  }
+  img {
+    height: 150px;
+  }
+}

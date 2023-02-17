@@ -1,0 +1,278 @@
+////////////////////////////////
+/*            MAIN            */
+////////////////////////////////
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+
+  h2 {
+    font-size: 24px;
+    color: whitesmoke;
+    margin: 20px;
+  }
+  p {
+    font-size: 18px;
+    color: $color-texto;
+    margin-bottom: 20px;
+  }
+  nav {
+    position: sticky;
+    width: 90vw;
+    top: 0;
+    background-color: white;
+    padding-top: 20px;
+    z-index: 1;
+
+    .menu {
+      list-style-type: none;
+      height: 30px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      font-size: 1.5rem;
+
+      .item a {
+        color: $nav-letras;
+        text-decoration: none;
+        font-weight: bolder;
+        padding: 20px;
+      }
+      .submenu {
+        position: absolute;
+        list-style-type: none;
+        display: none;
+        .sub_i {
+          font-size: 1rem;
+          display: flex;
+        }
+      }
+      .item:hover a {
+        background: $resaltado;
+        color: black;
+        transition: 0.2s ease;
+      }
+      .item:hover .submenu {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        background: $resaltado-inverso;
+        padding: 7px;
+        a {
+          background: none;
+          font-size: 1rem;
+          color: black;
+          padding: 7px;
+        }
+      }
+    }
+  }
+
+  ////////////////////////////////
+  /*    CONTAINER CON ASIDE     */
+  ////////////////////////////////
+
+  .container-principal {
+    row-gap: 10px;
+    column-gap: 10px;
+    height: 100vh;
+    margin: 0;
+
+    .cajas {
+      background: $color-cajas;
+      padding: 15px;
+      text-align: justify;
+      line-height: 30px;
+      font-size: 25px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      img {
+        width: 50%;
+        height: 450px;
+      }
+      h2 {
+        font-size: 70px;
+        font-weight: bold;
+        margin-bottom: 40px;
+        padding: 2px;
+        text-align: center;
+        color: $color-titulos;
+      }
+      h3 {
+        font-size: 40px;
+        padding: 10px;
+        color: $color-titulos;
+      }
+      .box1 {
+        margin: 20px;
+      }
+      .contenedorDividido {
+        display: grid;
+        grid-template-areas: "A publicidad";
+        grid-template-columns: auto 18%;
+        .box1 {
+          grid-area: A;
+          margin: 20px;
+        }
+        .aside {
+          grid-area: publicidad;
+          background: $color-aside;
+          margin-left: 20px;
+          p {
+            font-size: 15px;
+            padding: 5px;
+          }
+          img {
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            padding: 6px;
+            animation-name: rotacion;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-duration: 8s;
+          }
+        }
+      }
+    }
+
+    .box2 {
+      margin: 20px;
+      p {
+        margin-bottom: 20px;
+      }
+      a {
+        text-decoration: none;
+      }
+      img {
+        width: 450px;
+        margin-bottom: 20px;
+      }
+    }
+    .box3 {
+      margin-left: 10px;
+      .img-grande {
+        img {
+          width: 250px;
+          height: 300px;
+          float: right;
+        }
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .aside p:hover {
+      transition: 0.5s ease;
+      font-weight: bold;
+    }
+    @keyframes rotacion {
+      0% {
+        rotate: 0deg;
+      }
+      100% {
+        rotate: 360deg;
+      }
+    }
+  }
+
+  ////////////////////////////////
+  /*        CAJA FLOTANTE       */
+  ////////////////////////////////
+
+  .fija {
+    font-family: Arial;
+    background-color: $color-aside;
+    border: solid 1px #000000;
+    padding: 5px;
+    font-size: 24px;
+    width: 90px;
+    height: 90px;
+    position: sticky;
+    float: right;
+    bottom: 100px;
+    text-decoration: none;
+    a {
+      color: $color-texto;
+      text-decoration: none;
+    }
+  }
+  .fija:hover {
+    transform: scale(1.1);
+    border-color: solid 1px $color-texto;
+    transition: 0.3s ease;
+  }
+
+  ////////////////////////////////
+  /*    DISPOSICIÓN PARALELA    */
+  ////////////////////////////////
+
+  .contact {
+    display: none;
+    .comunicate__card {
+      background: $color-cajas;
+      padding: 15px;
+      text-align: justify;
+      line-height: 30px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      p {
+        font-size: 60px;
+      }
+      img {
+        width: 80px;
+        height: 80px;
+      }
+
+      h2 {
+        font-size: 70px;
+        font-weight: bold;
+        margin-bottom: 40px;
+        padding: 20px;
+        text-align: center;
+        color: $color-titulos;
+      }
+    }
+    .comunicate__card a {
+      text-decoration: none;
+    }
+  }
+
+  ////////////////////////////////
+  /*           FOOTER           */
+  ////////////////////////////////
+
+  footer {
+    background-color: $color-texto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 15px;
+    width: 90vw;
+
+    a {
+      transition: color 0.3s ease;
+      color: $color-aside;
+      text-decoration: none;
+    }
+    p {
+      color: $color-aside;
+    }
+  }
+  footer a:hover {
+    color: $nav-letras;
+  }
+}

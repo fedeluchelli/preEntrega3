@@ -1,0 +1,29 @@
+//    VARIABLES
+//
+//-fondo
+$color-fondo1: #8f00ff;
+$color-fondo: linear-gradient(to bottom, #8f00ff, #f155ff, #8f00ff);
+
+//-navegador
+$nav-letras: #47ee7f;
+$resaltado: linear-gradient(to bottom, #dc6002, #f051b0);
+$resaltado-inverso: linear-gradient(to top, #dc6002, #f051b0);
+
+//-cajas
+$color-cajas: -webkit-repeating-linear-gradient(#47ee7f, #4a72fb);
+$color-aside: #ffffff;
+
+//-texto
+$color-texto: #333;
+$color-titulos: #f1fff8;
+$fuente-titulo: "abstract";
+$fuente-letras: "Arial", sans-serif;
+
+//    ESTILOS
+@import "header";
+@import "body";
+@import "main";
+
+//    RESPONSIVE
+@import "tablet";
+@import "mobile";
